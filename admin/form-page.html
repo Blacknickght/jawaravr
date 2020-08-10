@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/ico" sizes="16x16" href="../images/favicon.ico">
+    <title>JawaraVR - Admin Page</title>
+    <!-- This page CSS -->
+    <!-- This page CSS -->
+    <link href="../assets/node_modules/datatables/media/css/dataTables.bootstrap4.css" rel="stylesheet">    
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard4.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="skin-default fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">JawaraVR</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                            <!-- dark Logo text -->
+                            <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo text -->
+                            <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a
+                                class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light"
+                                href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- .right-sidebar -->
+            <div class="right-sidebar">
+                <div class="slimscrollright">
+                    <div class="rpanel-title"> Sidebar Option <span><i class="ti-close right-side-toggle"></i></span>
+                    </div>
+                    <div class="r-panel-body">
+                        <ul id="themecolors" class="m-t-20">
+                            <li><b>With Light sidebar</b></li>
+                            <li><a href="javascript:void(0)" data-skin="skin-default"
+                                    class="default-theme working">1</a></li>
+                            <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
+                            <li><a href="javascript:void(0)" data-skin="skin-default-dark"
+                                    class="default-dark-theme ">7</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </header>
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- User Profile-->
+                <div class="user-profile">
+                    <div style="font-weight: bold; text-align: left; padding-left: 10px; color: #838383;"
+                        class="u-dropdown">
+                        Welcome: <span style="color: #63bb46;">Admin</span>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">--- MENU</li>
+                        <li>
+                            <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                aria-expanded="false">
+                                <i class="icon-speedometer"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li>
+                                    <a href="index.html" class="active">Website</a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                                <i class="ti-files"></i>
+                                <span class="hide-menu">Event Page</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li>
+                                    <a href="all-events.html">All Events</a>
+                                </li>                                
+                                <li><a href="form-page.html">Form Page</a></li>
+                                <li><a href="subscriber.html">Subscriber</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </aside>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Form Page</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active">Form Page</li>
+                            </ol>
+                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New Event</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Content-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">General Form</h4>
+                                <h6 class="card-subtitle"> All with bootstrap element classies </h6>
+                                <form class="mt-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    </div>
+                                    <div class="custom-control custom-checkbox mr-sm-2 mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="checkbox0" value="check">
+                                        <label class="custom-control-label" for="checkbox0">Check Me Out !</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-body">
+                            <h4 class="card-title">Default Forms</h4>
+                            <h5 class="card-subtitle"> All bootstrap element classies </h5>
+                            <form class="form-horizontal mt-4">
+                                <div class="form-group">
+                                    <label>Default Text <span class="help"> e.g. "George deo"</span></label>
+                                    <input type="text" class="form-control" value="George deo...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="example-email">Email <span class="help"> e.g. "example@gmail.com"</span></label>
+                                    <input type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" value="password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Placeholder</label>
+                                    <input type="text" class="form-control" placeholder="placeholder">
+                                </div>
+                                <div class="form-group">
+                                    <label>Text area</label>
+                                    <textarea name="editor1" id="editor1"  class="form-control" rows="5"></textarea>
+                                </div> 
+                                <hr>     
+                                <h4>FAQ Field</h4>                          
+                                <div class="faq-field">
+                                    <div class="form-group">
+                                        <label>Question</label>
+                                        <input type="text" class="form-control" placeholder="FAQ Question">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Answer</label>
+                                        <textarea class="form-control" rows="5"></textarea>
+                                    </div> 
+                                </div>
+                                <div id="czContainer">
+                                    <div id="first">                                        
+                                        <div class="faq-field">
+                                            <div class="form-group">
+                                                <label>Question</label>
+                                                <input type="text" class="form-control" placeholder="FAQ Question">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Answer</label>
+                                                <textarea name="editor1" id="editor1" class="form-control" rows="5"></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Read only input</label>
+                                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <fieldset disabled>
+                                        <label for="disabledTextInput">Disabled input</label>
+                                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                    </fieldset>
+                                </div>
+                                <div class="form-group row pt-3">
+                                    <div class="col-sm-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio2">Toggle this custom radio</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                                </div>
+                                <div class="custom-control custom-switch mb-3">
+                                  <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+                                  <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+                                </div>
+                                <div class="form-group">
+                                    <label>Input Select</label>
+                                    <select class="custom-select col-12" id="inlineFormCustomSelect">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Default file upload</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Custom File upload</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Helping text</label>
+                                    <input type="text" class="form-control" placeholder="Helping text">
+                                    <span class="help-block"><small>A block of help text that breaks onto a new line and may extend beyond one line.</small></span> </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->                
+                <!--Content end-->                
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    
+    <script src="dist/js/ckeditor.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/popper/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery.czMore-latest.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--Sky Icons JavaScript -->
+    <script src="../assets/node_modules/skycons/skycons.js"></script>
+    <!--morris JavaScript -->
+    <script src="../assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="../assets/node_modules/datatables/datatables.js"></script>
+    <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="../assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard4.js"></script>
+
+    <script>
+        $(function () {
+            $('#myTable').DataTable();            
+        });        
+        $("#czContainer").czMore();             
+        CKEDITOR.replace( 'editor1');         
+    </script>    
+</body>
+
+</html>
